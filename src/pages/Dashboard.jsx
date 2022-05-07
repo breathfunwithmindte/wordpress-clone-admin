@@ -10,6 +10,7 @@ import useMain from '../MainContext';
 import Ctable from "../components/Ctable";
 import Alert from "../components/elms/Alert";
 import ElmCodeblockTemplate from './ElmCodeblock.template';
+import CodeblockSettings from '../components/CodeblockSettings';
 
 
 function createData(id, payment_method, costumer, state, products, stage, createdAt, updatedAt) {
@@ -81,9 +82,9 @@ const Dashboard = () => {
                 <br />
                 <div className='page-in-default-content' >
                     <ElmCodeblockTemplate>
-                        <div style={{ width: "100%", height: '100%', display: "flex", justifyContent: "space-between", alignItems: "center", padding: "var(--p)" }}>
+                        <div style={{ width: "100%", height: '100%', display: "flex", justifyContent: "space-between", alignItems: "center", padding: "var(--p1)" }}>
                             <strong>Home Page</strong>
-                            <p>settigs-import</p>
+                            <CodeblockSettings />
                         </div>
                     </ElmCodeblockTemplate>
                     {/* <Ctable rows={rows} columns={columns} /> */}

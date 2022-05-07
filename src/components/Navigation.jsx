@@ -39,16 +39,9 @@ const Navigation = () => {
   const website_navigations = useMemo(() => {
     return [
       { label: "Posts", path: "posts/read" },
-      { label: "New Post", path: "posts/new" },
       { label: "Pages", path: "pages/read" },
-      { label: "New Page", path: "pages/new" },
-    ]
-  }, [])
-  const widgets_navigations = useMemo(() => {
-    return [
       { label: "Widgets", path: "widgets/read" },
-      { label: "New Widget", path: "widgets/new" },
-      { label: "Publish Widget", path: "publish/widget" }
+      { label: "Plugins", path: "plugins/read" },
     ]
   }, [])
   const appearance_navigations = useMemo(() => {
@@ -110,20 +103,6 @@ const Navigation = () => {
       <ul>
         {
           crm_navigations.map((item , index) => {
-            return (
-              <li key={index}>
-                <Button style={buttonStyle} onClick={handleNavigate.bind({ path: item.path })}>
-                  {item.label}
-                </Button>
-              </li>
-            )
-          })
-        }
-      </ul>
-      <strong className='muted'>Components</strong>
-      <ul>
-        {
-          widgets_navigations.map((item , index) => {
             return (
               <li key={index}>
                 <Button style={buttonStyle} onClick={handleNavigate.bind({ path: item.path })}>

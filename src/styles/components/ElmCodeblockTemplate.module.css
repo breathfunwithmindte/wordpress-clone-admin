@@ -2,6 +2,7 @@
 {
     width: 100%;
     height: 693px;
+    min-width: 963px;
     display: flex;
     border: 1px solid var(--bg2)
 }
@@ -31,4 +32,26 @@
     min-height: 46px;
     position: sticky;
     top: 0px;
+    z-index: 14;
+}
+
+.v1-codeblock-settings {
+    min-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: var(--p1);
+    position: relative;
+}
+
+.v1-codeblock-settings-window {
+    position: absolute;
+    top: 46px;
+    min-height: 369px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg1);
+    right: 14px;
+    width: 454px;
+    padding: var(--p);
 }

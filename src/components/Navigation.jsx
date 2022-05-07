@@ -15,15 +15,54 @@ const Navigation = () => {
     justifyContent: "flex-start",
     borderBottomRightRadius: 14, 
     borderTopRightRadius: 14,
-    paddingLeft: "var(--p)"
+    paddingLeft: "var(--p)",
+    textTransform: "none"
   }
 
   const primary_navigations = useMemo(() => {
     return [
-      { label: "Inbox", path: "inbox" },
-      { label: "Favorite", path: "faborite" },
-      { label: "Trash", path: "trash" },
-      { label: "Draft", path: "draft" },
+      { label: "My Home", path: "myhome" },
+      { label: "Stats", path: "stats" },
+      { label: "Static", path: "static" },
+      { label: "Categories", path: "categories" },
+      { label: "DB Collections", path: "db-collections" }
+    ]
+  }, [])
+  const crm_navigations = useMemo(() => {
+    return [
+      { label: "Products", path: "crm/products/read" },
+      { label: "New Product", path: "crm/products/new" },
+      { label: "Orders", path: "crm/orders/read" },
+      { label: "Costumers", path: "costumers/read" },
+    ]
+  }, [])
+  const website_navigations = useMemo(() => {
+    return [
+      { label: "Posts", path: "posts/read" },
+      { label: "New Post", path: "posts/new" },
+      { label: "Pages", path: "pages/read" },
+      { label: "New Page", path: "pages/new" },
+    ]
+  }, [])
+  const pwebsite_navigations = useMemo(() => {
+    return [
+      { label: "Posts", path: "private/posts/read" },
+      { label: "New Post", path: "private/posts/new" },
+      { label: "Pages", path: "private/pages/read" },
+      { label: "New Page", path: "private/pages/new" },
+    ]
+  }, [])
+  const appearance_navigations = useMemo(() => {
+    return [
+      { label: "theme", path: "theme" },
+      { label: "ui library", path: "ui/library" }
+    ]
+  }, [])
+  const autheticatiton_navigations = useMemo(() => {
+    return [
+      { label: "Costumers", path: "costumers/read" },
+      { label: "New Costumer", path: "costumers/new" },
+      { label: "Authetication Settings", path: "authetication/settings" }
     ]
   }, [])
 
@@ -54,13 +93,71 @@ const Navigation = () => {
           })
         }
       </ul>
-      <strong className='muted'>Categories</strong>
+      <strong className='muted'>Website</strong>
       <ul>
         {
-          primary_navigations.map((item , index) => {
+          website_navigations.map((item , index) => {
             return (
               <li key={index}>
-                <Button style={buttonStyle}># {item.label}</Button>
+                <Button style={buttonStyle} onClick={handleNavigate.bind({ path: item.path })}>
+                  {item.label}
+                </Button>
+              </li>
+            )
+          })
+        }
+      </ul>
+      <strong className='muted'>CRM</strong>
+      <ul>
+        {
+          crm_navigations.map((item , index) => {
+            return (
+              <li key={index}>
+                <Button style={buttonStyle} onClick={handleNavigate.bind({ path: item.path })}>
+                  {item.label}
+                </Button>
+              </li>
+            )
+          })
+        }
+      </ul>
+      <strong className='muted'>Private Website</strong>
+      <ul>
+        {
+          pwebsite_navigations.map((item , index) => {
+            return (
+              <li key={index}>
+                <Button style={buttonStyle} onClick={handleNavigate.bind({ path: item.path })}>
+                  {item.label}
+                </Button>
+              </li>
+            )
+          })
+        }
+      </ul>
+      <strong className='muted'>Appearance</strong>
+      <ul>
+        {
+          appearance_navigations.map((item , index) => {
+            return (
+              <li key={index}>
+                <Button style={buttonStyle} onClick={handleNavigate.bind({ path: item.path })}>
+                  {item.label}
+                </Button>
+              </li>
+            )
+          })
+        }
+      </ul>
+      <strong className='muted'>Authetication</strong>
+      <ul>
+        {
+          autheticatiton_navigations.map((item , index) => {
+            return (
+              <li key={index}>
+                <Button style={buttonStyle} onClick={handleNavigate.bind({ path: item.path })}>
+                  {item.label}
+                </Button>
               </li>
             )
           })

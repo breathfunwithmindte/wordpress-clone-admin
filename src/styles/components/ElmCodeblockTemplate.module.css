@@ -48,10 +48,12 @@
     position: absolute;
     top: 46px;
     min-height: 369px;
+    max-height: 556px;
     display: flex;
     flex-direction: column;
     background-color: var(--bg1);
     right: 14px;
     width: 454px;
     padding: var(--p);
+    overflow-y: auto;
 }

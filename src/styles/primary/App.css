@@ -62,3 +62,12 @@
   width: 100%;
   height: fit-content;
 }
+
+.page-in-default-section-title {
+  width: 100%;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.page-in-default-section-title-in {
+  width: 46%;
+  display: flex; align-items: center; 
+}

@@ -54,3 +54,15 @@ strong, em, p, pre {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--hl);
 }
+
+
+.cm-editor {
+  background-color: inherit !important;
+  border: 1px solid var(--h)
+}
+.cm-gutters {
+  background-color: inherit !important;
+}
+.cm-activeLine {
+  background-color: var(--h) !important;
+}

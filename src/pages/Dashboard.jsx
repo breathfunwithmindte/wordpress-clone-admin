@@ -9,6 +9,7 @@ import { useParams } from 'react-router';
 import useMain from '../MainContext';
 import Ctable from "../components/Ctable";
 import Alert from "../components/elms/Alert";
+import ElmCodeblockTemplate from './ElmCodeblock.template';
 
 
 function createData(id, payment_method, costumer, state, products, stage, createdAt, updatedAt) {
@@ -79,7 +80,13 @@ const Dashboard = () => {
                 </section>
                 <br />
                 <div className='page-in-default-content' >
-                    <Ctable rows={rows} columns={columns} />
+                    <ElmCodeblockTemplate>
+                        <div style={{ width: "100%", height: '100%', display: "flex", justifyContent: "space-between", alignItems: "center", padding: "var(--p)" }}>
+                            <strong>Home Page</strong>
+                            <p>settigs-import</p>
+                        </div>
+                    </ElmCodeblockTemplate>
+                    {/* <Ctable rows={rows} columns={columns} /> */}
                 </div>
           </div>
       </div>

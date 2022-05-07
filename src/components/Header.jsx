@@ -39,7 +39,7 @@ const Header = () => {
     <header className='header'>
       <div className="logo">
         <Avatar src="https://cdn.iconscout.com/icon/premium/png-256-thumb/emails-2414509-2031031.png" alt="" className="logo-img" />
-        <h1 className="logo-h1">MailExplore</h1>
+        <h1 className="logo-h1">Wordpress Clone</h1>
       </div>
       <Autocomplete
         {...{ options: main.emails || [], getOptionLabel: (i) => i.title  }}

@@ -35,3 +35,30 @@
   width: 100%;
   min-height: 84vh;
 }
+
+.page-in-default-01 {
+  width: 100%;
+  height: 100%;
+}
+.page-in-default-01-in {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: var(--p)
+}
+.page-in-default-section {
+  width: 100%;
+  height: fit-content;
+  min-height: 128px;
+  background: var(--bg1);
+  padding: var(--p2);
+  border-radius: 5.6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-in-default-content {
+  padding: var(--p2);
+  width: 100%;
+  height: fit-content;
+}

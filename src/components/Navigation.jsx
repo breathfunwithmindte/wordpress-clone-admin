@@ -44,12 +44,11 @@ const Navigation = () => {
       { label: "New Page", path: "pages/new" },
     ]
   }, [])
-  const pwebsite_navigations = useMemo(() => {
+  const widgets_navigations = useMemo(() => {
     return [
-      { label: "Posts", path: "private/posts/read" },
-      { label: "New Post", path: "private/posts/new" },
-      { label: "Pages", path: "private/pages/read" },
-      { label: "New Page", path: "private/pages/new" },
+      { label: "Widgets", path: "widgets/read" },
+      { label: "New Widget", path: "widgets/new" },
+      { label: "Publish Widget", path: "publish/widget" }
     ]
   }, [])
   const appearance_navigations = useMemo(() => {
@@ -76,7 +75,7 @@ const Navigation = () => {
       <div className="composer-button-wrapper">
         <Button style={{ borderRadius: 14, width: "92%", height: 46 }} color="primary" variant="contained" onClick={()=>setOpencompose(true)} >
           <AddIcon />
-          Compose
+          Add Item
         </Button>
       </div>
       <strong className='muted'>Primary</strong>
@@ -121,10 +120,10 @@ const Navigation = () => {
           })
         }
       </ul>
-      <strong className='muted'>Private Website</strong>
+      <strong className='muted'>Components</strong>
       <ul>
         {
-          pwebsite_navigations.map((item , index) => {
+          widgets_navigations.map((item , index) => {
             return (
               <li key={index}>
                 <Button style={buttonStyle} onClick={handleNavigate.bind({ path: item.path })}>

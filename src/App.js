@@ -4,6 +4,7 @@ import "./styles/primary/App.css";
 import "./styles/primary/PageHeader.css";
 import "./styles/primary/Reuseable.css";
 import "./styles/primary/Compose.css";
+import "./styles/primary/Ctable.css";
 import MainTemplate from "./pages/Main.template.jsx";
 import SoloContentTemplate from "./pages/SoloContent.template";
 import Dashboard from "./pages/Dashboard";
